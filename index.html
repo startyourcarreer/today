@@ -1,0 +1,475 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Get handpicked services</title>         
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="styles.css"> 
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+            body {
+    font-family: Arial, sans-serif;
+}
+
+#surveyButton {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#countrySelect {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+#submitButton {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+        </style> 
+    </head>     
+    <body> 
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2>Select a Country</h2>
+                <select id="countrySelect">
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="germany">Germany</option>
+                    <option value="sweden">Sweden</option>
+                    <option value="netherlands">Netherlands</option>
+                </select>
+                <button id="submitButton">Submit</button>
+            </div>
+        </div>
+        <nav> 
+            <div class="nav-bar container"> 
+                <i class='bx bx-menu sidebarOpen'></i> 
+                <span class="logo navLogo"><a href="#">JobUS</a></span> 
+                <div class="menu"> 
+                    <div class="logo-toggle"> 
+                        <span class="logo"><a href="#">JobUS</a></span> 
+                        <i class='bx bx-x siderbarClose'></i> 
+                    </div>                     
+                    <ul class="nav-links px-0"> 
+                        <li>
+                            <a href="#">Home</a>
+                        </li>                         
+                        <li>
+                            <a href="#">About</a>
+                        </li>                         
+                        <li>
+                            <a href="#">Services</a>
+                        </li>                         
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>                         
+                    </ul>                     
+                </div>                 
+                <div class="darkLight-searchBox"> 
+                    <div class="dark-light"> 
+                        <i class='bx bx-moon moon'></i> 
+                        <i class='bx bx-sun sun'></i> 
+                    </div>                     
+                    <div class="searchBox"> 
+                        <div class="searchToggle"> 
+                            <i class='bx bx-x cancel'></i> 
+                            <i class='bx bx-search search'></i> 
+                        </div>                         
+                        <div class="search-field"> 
+                            <input type="text" placeholder="Search..."> 
+                            <i class='bx bx-search'></i> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </nav>                  
+        <section class="hero"> 
+            <div class="container"> 
+                <div class="row row-cols-lg-2"> 
+                    <div class="col-lg-6 mt-5 d-flex flex-column justify-content-center"> 
+                        <div class="row">
+                            <h2 class="text-white fs-1">Sign up for our services and get various oppurtunity</h2>
+                        </div>                         
+                        <p class="text-white">easily find jobs, various services and paid surveys online</p> 
+                        <div class="button-group mb-4"> 
+                            <a class="button1" id="redirectButton" href="#moreOffer">Signup now</a> 
+                            <div class="fs-5 text-white note">
+                                <p>No human verification required</p>
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="col-lg-6"> 
+                        <div class="row"> 
+                            <img class="w-100" src="Images/Mobile-mockup.png" alt=""> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <section class="pt-5" id="moreOffer"> 
+            <div class="MuiBox-root css-i3pbo container mt-5"> 
+                <div class="MuiBox-root css-5vz3hp"> 
+                    <h4 class="MuiTypography-root MuiTypography-h4 css-9hid8g">Nearest offers</h4>
+                </div>
+                <div class="MuiBox-root css-1s2wzrj">
+                    <div class="MuiBox-root css-10klw3m">
+                        <div class="MuiBox-root css-bb2ilc">
+                            <div class="MuiBox-root css-q9tc19">
+                                <div class="MuiBox-root css-1nd9dtm">
+                                    <div class="MuiBox-root css-sllwuo">
+                                        <div class="MuiBox-root css-1kwc1hg">
+                                            <img class="MuiBox-root css-1w4zhob" src="https://news.umanitoba.ca/wp-content/uploads/2021/11/Career-Month-3-UM-Today--1200x799.png" alt="Job USA">
+                                        </div>
+                                    </div>
+                                    <div class="MuiBox-root css-1rr4qq7">
+                                        <div class="MuiBox-root css-j7qwjs">
+                                            <div class="MuiBox-root css-1vve356">
+                                                <div class="d-flex"><h4 class="MuiTypography-root MuiTypography-h4 css-rovz4v me-2">Find job</h4> <span class="me-2"><img style="width: 20px;" src="https://flagpedia.net/data/flags/emoji/apple/160x160/us.png" alt=""></span></div>
+                                                <h6 class="MuiTypography-root MuiTypography-h6 css-8p31so">Get a job oppurtunity in the abroad</h6>
+                                                <div class="MuiBox-root css-dtjlfv">
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/200.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/278.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/175.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-182gvo0">+999</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MuiBox-root css-lzlkz">
+                                    <div class="MuiBox-root css-1sie9le"></div>
+                                    <div class="MuiBox-root css-42kxdp"></div>
+                                </div>
+                                <div class="MuiBox-root css-1szrgz2">
+                                    <div class="MuiTypography-root MuiTypography-body1 css-1rv4btl">The offer ends in</div>
+                                    <div class="_countdown_1yske_11">
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29">0</div>
+                                                <div class="_countdown__digit_1yske_29">1</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Days</div>
+                                        </div>
+                                        <div class="_countdown__divider_1yske_23">:</div>
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29">0</div>
+                                                <div class="_countdown__digit_1yske_29">2</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Hours</div>
+                                        </div>
+                                        <div class="_countdown__divider_1yske_23">:</div>
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29" id="minuteTens1">3</div>
+                                                <div class="_countdown__digit_1yske_29" id="minuteOnes1">4</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Minutes</div>
+                                        </div>
+                                    </div>
+                                    <div class="MuiTypography-root MuiTypography-subtitle1 css-dmxir2" id="date">Until </div>
+                                    <div class="MuiBox-root css-0"> 
+                                        <a href="Job.html"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-vf36pj" tabindex="0" type="button">Participate
+                                                <span class="MuiTouchRipple-root css-w0pj6f"></span> 
+                                            </button></a> 
+                                    </div>                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="MuiBox-root css-i3pbo container"> 
+                <div class="MuiBox-root css-5vz3hp"> 
+</div>
+                <div class="MuiBox-root css-1s2wzrj">
+                    <div class="MuiBox-root css-10klw3m">
+                        <div class="MuiBox-root css-bb2ilc">
+                            <div class="MuiBox-root css-q9tc19">
+                                <div class="MuiBox-root css-1nd9dtm">
+                                    <div class="MuiBox-root css-sllwuo">
+                                        <div class="MuiBox-root css-1kwc1hg">
+                                            <img class="MuiBox-root css-1w4zhob" src="https://assets.entrepreneur.com/content/3x2/2000/20190710153442-shutterstock-1411045943.jpeg" alt="Cashapp">
+                                        </div>
+                                    </div>
+                                    <div class="MuiBox-root css-1rr4qq7">
+                                        <div class="MuiBox-root css-j7qwjs">
+                                            <div class="MuiBox-root css-1vve356">
+                                                <h4 class="MuiTypography-root MuiTypography-h4 css-rovz4v">financial adviser USA</h4>
+                                                <h6 class="MuiTypography-root MuiTypography-h6 css-8p31so">Get your financial adviser on USA now</h6>
+                                                <div class="MuiBox-root css-dtjlfv">
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/200.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/278.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/175.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-182gvo0">+999</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MuiBox-root css-lzlkz">
+                                    <div class="MuiBox-root css-1sie9le"></div>
+                                    <div class="MuiBox-root css-42kxdp"></div>
+                                </div>
+                                <div class="MuiBox-root css-1szrgz2">
+                                    <div class="MuiTypography-root MuiTypography-body1 css-1rv4btl">The offer ends in</div>
+                                    <div class="_countdown_1yske_11">
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29">0</div>
+                                                <div class="_countdown__digit_1yske_29">1</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Days</div>
+                                        </div>
+                                        <div class="_countdown__divider_1yske_23">:</div>
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29">0</div>
+                                                <div class="_countdown__digit_1yske_29">2</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Hours</div>
+                                        </div>
+                                        <div class="_countdown__divider_1yske_23">:</div>
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29" id="minuteTens2">3</div>
+                                                <div class="_countdown__digit_1yske_29" id="minuteOnes2">4</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Minutes</div>
+                                        </div>
+                                    </div>
+                                    <div class="MuiTypography-root MuiTypography-subtitle1 css-dmxir2" id="date2">Until </div>
+                                    <div class="MuiBox-root css-0"> 
+                                        <a href="https://aff2jobs.com/go?c=5973&p=18025"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-vf36pj" tabindex="0" type="button">Participate
+                                                <span class="MuiTouchRipple-root css-w0pj6f"></span> 
+                                            </button></a> 
+                                    </div>                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>              
+            <div class="MuiBox-root css-i3pbo container"> 
+                <div class="MuiBox-root css-5vz3hp"> 
+</div>
+                <div class="MuiBox-root css-1s2wzrj">
+                    <div class="MuiBox-root css-10klw3m">
+                        <div class="MuiBox-root css-bb2ilc">
+                            <div class="MuiBox-root css-q9tc19">
+                                <div class="MuiBox-root css-1nd9dtm">
+                                    <div class="MuiBox-root css-sllwuo">
+                                        <div class="MuiBox-root css-1kwc1hg">
+                                            <img class="MuiBox-root css-1w4zhob" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb4JR-_tQ5rgDHA3MaN-NoUp_cOh8sMpJlGOWICh6ZqsIlMeI4KXgyYx6rEMaBUCS1TAk&usqp=CAU" alt="Samsung Galaxy s24 Ultra">
+                                        </div>
+                                    </div>
+                                    <div class="MuiBox-root css-1rr4qq7">
+                                        <div class="MuiBox-root css-j7qwjs">
+                                            <div class="MuiBox-root css-1vve356">
+                                                <h4 class="MuiTypography-root MuiTypography-h4 css-rovz4v">Paid survey</h4>
+                                                <h6 class="MuiTypography-root MuiTypography-h6 css-8p31so">Participate in surveys and earn rewards</h6>
+                                                <div class="MuiBox-root css-dtjlfv">
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/200.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/278.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular css-1h9suxu">
+                                                        <img src="https://img.rewardis.online/avatars/175.jpeg" class="MuiAvatar-img css-1hy9t21">
+                                                    </div>
+                                                    <div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-182gvo0">+999</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MuiBox-root css-lzlkz">
+                                    <div class="MuiBox-root css-1sie9le"></div>
+                                    <div class="MuiBox-root css-42kxdp"></div>
+                                </div>
+                                <div class="MuiBox-root css-1szrgz2">
+                                    <div class="MuiTypography-root MuiTypography-body1 css-1rv4btl">The offer ends in</div>
+                                    <div class="_countdown_1yske_11">
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29">0</div>
+                                                <div class="_countdown__digit_1yske_29">1</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Days</div>
+                                        </div>
+                                        <div class="_countdown__divider_1yske_23">:</div>
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29">0</div>
+                                                <div class="_countdown__digit_1yske_29">2</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Hours</div>
+                                        </div>
+                                        <div class="_countdown__divider_1yske_23">:</div>
+                                        <div>
+                                            <div class="_countdown__digits_1yske_29">
+                                                <div class="_countdown__digit_1yske_29" id="minuteTens3">3</div>
+                                                <div class="_countdown__digit_1yske_29" id="minuteOnes3">4</div>
+                                            </div>
+                                            <div class="_countdown__type_1yske_50">Minutes</div>
+                                        </div>
+                                    </div>
+                                    <div class="MuiTypography-root MuiTypography-subtitle1 css-dmxir2" id="date3">Until </div>
+                                    <div class="MuiBox-root css-0"> 
+                                        <a><button id="surveyButton" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-vf36pj" tabindex="0" type="button">Participate
+                                                <span class="MuiTouchRipple-root css-w0pj6f"></span> 
+                                            </button></a> 
+                                    </div>                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                        
+        </section>         
+        <footer> 
+            <div class="container"> 
+                <div class="border-bottom pt-5"> 
+                    <div class="d-flex gap-5 justify-content-center text-white"> 
+                        <p>Terms and conditions</p> 
+                        <p>Privacy policy</p> 
+                        <p>Cookie policy</p> 
+                    </div>                     
+                </div>                 
+                <div class="d-flex justify-content-center pt-4"> 
+                    <p class="text-light">Copyright © 2024 JobUS</p> 
+                </div>                 
+            </div>             
+        </footer>         
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>         
+        <script src="script.js"></script>         
+        <script>
+        window.onload = function() {
+          var domainUrl = window.location.href.split('?')[1]; // Get the domain URL parameter
+          
+          if (domainUrl) {
+            var button = document.getElementById('redirectButton');
+            button.href = domainUrl; // Update the href attribute with the domain URL parameter
+          }
+        };
+    </script> 
+    
+    <script>
+document.getElementById('surveyButton').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'flex';
+});
+
+document.getElementById('submitButton').addEventListener('click', function() {
+    const selectedCountry = document.getElementById('countrySelect').value;
+    if (selectedCountry === 'germany') {
+        window.location.href = 'SurveyGermany.html';
+    } else if (selectedCountry === 'sweden') {
+        window.location.href = 'SurveySweden.html';
+    } else if (selectedCountry === 'netherlands') {
+        window.location.href = 'SurveyNetherlands.html';
+    } else {
+        alert('Please select a country');
+    }
+});
+
+// Add event listener to close the popup when clicking outside of it
+document.getElementById('popup').addEventListener('click', function(event) {
+    if (event.target === this) {
+        this.style.display = 'none';
+    }
+});
+
+    </script>
+
+    <script>
+    // Function to update a single minute counter
+    function updateMinuteCounter(tensElement, onesElement) {
+      // Parse the current values
+      let tens = parseInt(tensElement.textContent);
+      let ones = parseInt(onesElement.textContent);
+
+      // Decrement the minute ones
+      ones -= 1;
+
+      // Check if we need to decrement the tens
+      if (ones === -1) {
+        ones = 9;
+        tens -= 1;
+      }
+
+      // Stop at 00
+      if (tens === 0 && ones === 0) {
+        tensElement.textContent = tens;
+        onesElement.textContent = ones;
+        return;
+      }
+
+      // Update the display
+      tensElement.textContent = tens;
+      onesElement.textContent = ones;
+    }
+
+    // Initialize and update multiple counters
+    function initializeAndStartCounters() {
+      const counters = [
+        {tens: 'minuteTens1', ones: 'minuteOnes1'},
+        {tens: 'minuteTens2', ones: 'minuteOnes2'},
+        {tens: 'minuteTens3', ones: 'minuteOnes3'},
+        // Add more counters here if needed
+      ];
+
+      // Initialize counters to start from 34
+      counters.forEach(counter => {
+        document.getElementById(counter.tens).textContent = '3';
+        document.getElementById(counter.ones).textContent = '4';
+      });
+
+      // Update the counters every second
+      setInterval(() => {
+        counters.forEach(counter => {
+          const tensElement = document.getElementById(counter.tens);
+          const onesElement = document.getElementById(counter.ones);
+          updateMinuteCounter(tensElement, onesElement);
+        });
+      }, 60000); // 1000 milliseconds = 1 second
+    }
+
+    // Start the counters
+    initializeAndStartCounters();
+    </script>
+    </body>     
+</html>
